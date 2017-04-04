@@ -1,6 +1,7 @@
 class QuotesController < Rulers::Controller
   def a_quote
-    render :a_quote, noun: :hello
+    quote = Rulers::Model::FileModel.find(1)
+    render :a_quote, obj: quote
   end
 
   def exception
